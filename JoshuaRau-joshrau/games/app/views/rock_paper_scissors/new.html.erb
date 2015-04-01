@@ -1,2 +1,10 @@
-<h1>RockPaperScissors#new</h1>
-<p>Find me in app/views/rock_paper_scissors/new.html.erb</p>
+<h1>Let's Play Rock Paper Scissors</h1>
+<p>You must guess either "rock", "Paper", or "Scissors" by inputting "0", "1", or "2" respectively</p>
+
+<ul>
+  <% 0.upto(2) do |number| %>
+    <li><%= link_to number, rock_paper_scissors_show_path(number) %></li>
+  <% end %>
+</ul>
+
+<div><%= link_to "Choose Game", games_path %></div>

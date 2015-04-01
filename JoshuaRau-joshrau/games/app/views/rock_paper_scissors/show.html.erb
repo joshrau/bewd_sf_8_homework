@@ -1,2 +1,9 @@
-<h1>RockPaperScissors#show</h1>
-<p>Find me in app/views/rock_paper_scissors/show.html.erb</p>
+<h1>Rock Paper Scissors Results</h1>
+
+<p>Here are the results</p>
+
+<div>You chose <%= @choice %></div>
+<div>The Computer chose <%= @comp_choice %></div> 
+<div>you <%= @result %></div>
+<BR>
+<Div><%= link_to "PLAY AGAIN", rock_paper_scissors_new_path %></div>

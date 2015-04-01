@@ -1,3 +1,8 @@
-<h1>Welcome to BEWD Games!</h1>
+<h1>Welcome to the Game Center!</h1>
+<p>Choose a game below to get started:</p>
+
+<%= image_tag("secret.png", :alt => "secret_number") %>
+<%= image_tag("RPS.png", :alt => "rock_paper_scissors") %>
 
 <div><%= link_to 'Play Secret Number!', new_secret_number_path %></div>
+<div><%= link_to 'Play Rock, Paper, Scissors!', rock_paper_scissors_new_path %></div>
