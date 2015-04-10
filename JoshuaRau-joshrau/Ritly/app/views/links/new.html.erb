@@ -1,6 +1,12 @@
 <h1>Links#new</h1>
 <p>Find me in app/views/links/new.html.erb</p>
 
+
+<% if user_signed_in? %>
+	<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+
+
+
 <% if @link.errors.any? %>
 	<div>
 		<p>error</p>
@@ -12,8 +18,7 @@
 <% end %>	
 
 <%= form_for(@link) do |f| %>
-
- <div class="field">
+<div class="field">
     <%= f.label :link %><br>
     <%= f.text_field :link%>
   </div> 
@@ -21,6 +26,19 @@
   <div class="actions">
     <%= f.submit %>
   </div> 
+ <% end %>
+
+
+
+<% else %>
+
+	<%= link_to 'sign in', user_session_path, method: :get %>
+	<%= link_to 'sign up', new_user_registration_path, method: :get %>
 
 <% end %>
+
+
+
+
+
 
