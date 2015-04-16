@@ -1,9 +1,20 @@
 <h1>Let's Play Rock Paper Scissors</h1>
 <p>You must guess either "rock", "Paper", or "Scissors" by inputting "0", "1", or "2" respectively</p>
 
+<p>Image version</p>
+
+<div>
+<%= link_to image_tag("rock.png", :alt => "rock"), rock_paper_scissor_path(0) %>
+<%= link_to image_tag("paper.png", :alt => "paper"), rock_paper_scissor_path(1) %>
+<%= link_to image_tag("scissors.png", :alt => "scissors"), rock_paper_scissor_path(2) %>
+</div> 
+
+<br /><br />
+
+<p>Numbered Version</p>
 <ul>
   <% 0.upto(2) do |number| %>
-    <li><%= link_to number, rock_paper_scissors_show_path(number) %></li>
+    <li><%= link_to number, rock_paper_scissor_path(number) %></li>
   <% end %>
 </ul>
 

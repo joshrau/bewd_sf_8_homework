@@ -1,5 +1,6 @@
 <%= render @outcome_partial %>
 
+<h4>You picked <%= @chosen_number %></h4>
 <h4>The secret number was <%= @secret_number %></h4>
 
 <div><%= link_to "PLAY AGAIN", new_secret_number_path %></div>

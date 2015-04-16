@@ -2,8 +2,29 @@
 
 <p>Here are the results</p>
 
-<div>You chose <%= @choice %></div>
-<div>The Computer chose <%= @comp_choice %></div> 
+<div>
+	You chose...
+	<% if @choice == 0 %>
+	rock (0)
+	<% elsif @choice == 1 %>
+	paper (1)
+	<% else %>
+	scissors (2)
+	<% end %>
+</div>
+
+<div>
+	The Computer chose 
+	<% if @comp_choice == 0 %>
+	rock (0)
+	<% elsif @comp_choice == 1 %>
+	paper (1)
+	<% elsif @comp_choice == 2 %>
+	scissors (2)
+	<% else %>
+	<% end %>
+</div> 
+
 <div>you <%= @result %></div>
 <BR>
-<Div><%= link_to "PLAY AGAIN", rock_paper_scissors_new_path %></div>
+<Div><%= link_to "PLAY AGAIN", new_rock_paper_scissor_path %></div>

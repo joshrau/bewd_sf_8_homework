@@ -4,7 +4,7 @@ class RockPaperScissorsController < ApplicationController
 
   def show
   	@choice = params[:id].to_i
-  	@comp_choice = rand(2)
+  	@comp_choice = rand(3)
    
 
 	if  @choice == 0 && @comp_choice == 2 

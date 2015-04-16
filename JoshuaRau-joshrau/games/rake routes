@@ -1,0 +1,7 @@
+           Prefix Verb URI Pattern                        Controller#Action
+                  root GET  /                                  games#index
+new_rock_paper_scissor GET  /rock_paper_scissors/new(.:format) rock_paper_scissors#new
+    rock_paper_scissor GET  /rock_paper_scissors/:id(.:format) rock_paper_scissors#show
+                 games GET  /games(.:format)                   games#index
+     new_secret_number GET  /secret_numbers/new(.:format)      secret_numbers#new
+         secret_number GET  /secret_numbers/:id(.:format)      secret_numbers#show
