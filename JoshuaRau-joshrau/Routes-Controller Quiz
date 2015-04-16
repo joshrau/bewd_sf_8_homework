@@ -1,0 +1,24 @@
+CatsController
+	resources :Cats only: [ :index, :show, :new, :create, :edit, :update]
+
+ShoesController
+	resources :Shoes only: [:index, :show]
+
+FoodsController
+	resources :foods only: [ :show, :edit, :update]
+
+StudentController
+	resources :students, only: [:index]
+
+VehiclesController
+	resources :Vehicles only: [ :index] do
+	collection do
+	get :search
+	end
+	member do
+	get :preview
+	end
+	end
+
+FruitsController
+	resources :Fruits
