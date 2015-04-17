@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<% if user_signed_in? %>
+	<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+<p>
+  <strong>Name:</strong>
+  <%= @painting.painting_title %>
+</p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @painting.artist %>
+</p>
+
+<p>
+  <strong>Museum:</strong>
+  <%= @painting.museum %>
+</p>
+
+<p>
+  <strong>Image URL:</strong>
+  <%= @painting.url %>
+</p>
+
+<% else %>
+	<%= link_to 'sign in', user_session_path, method: :get %>
+	<%= link_to 'sign up', new_user_registration_path, method: :get %>
+<% end %>
+
+<%= link_to 'Edit', edit_painting_path(@painting) %> |
+<%= link_to 'Back', paintings_path %>
+

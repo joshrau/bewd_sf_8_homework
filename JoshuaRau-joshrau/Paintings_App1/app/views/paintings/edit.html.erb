@@ -1,0 +1,13 @@
+<h1>Editing Painting</h1>
+
+<% if user_signed_in? %>
+  <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+
+<%= render 'form' %>
+
+<% else %>
+  <%= link_to 'sign in', user_session_path, method: :get %>
+  <%= link_to 'sign up', new_user_registration_path, method: :get %>
+<% end %>
+
+<%= link_to 'Back', painting_path %>
