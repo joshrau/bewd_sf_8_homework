@@ -1,0 +1,18 @@
+<p>Welcome to Rewlsy! See our articles below</P>
+
+<%= form_tag stories_path, method: 'GET' do %>
+	<%= text_field_tag :q, params[:q] %>
+	<%= submit_tag 'Search' %>
+	<% end %>
+
+<br/>
+<% @stories.each do |story| %>
+      
+        <%= story.title %><%= ",  " %>
+        <%= story.category %><%= ",  " %>
+        <%= story.link %><%= ",  " %>
+        <%= story.upvotes %><br/><br/>
+<% end %>      
+
+
+<%= link_to 'New Story', new_story_path %>

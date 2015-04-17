@@ -1,0 +1,18 @@
+# Add your own tasks in files placed in lib/tasks ending in .rake,
+# for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
+
+require File.expand_path('../config/application', __FILE__)
+
+Rails.application.load_tasks
+
+#  Prefix Verb   URI Pattern                 Controller#Action
+#    stories GET    /stories(.:format)          stories#index
+#            POST   /stories(.:format)          stories#create
+#  new_story GET    /stories/new(.:format)      stories#new
+# edit_story GET    /stories/:id/edit(.:format) stories#edit
+#      story GET    /stories/:id(.:format)      stories#show
+#            PATCH  /stories/:id(.:format)      stories#update
+#            PUT    /stories/:id(.:format)      stories#update
+#            DELETE /stories/:id(.:format)      stories#destroy
+#       root GET    /                           stories#index
+
